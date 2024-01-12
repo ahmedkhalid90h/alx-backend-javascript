@@ -2,12 +2,16 @@
  * getResponseFromAPI
  * @return {string} status
  */
-export default function getResponseFromAPI() {
-  return new Promise((resolve, reject) => {
-    resolve({
-      status: 200,
-      body: 'success',
-    });
-    reject(new Error('The fake API is not working currently'));
-  });
+
+let uploadPhotos = () => Promise.resolve({
+  satuse: 200,
+  body: 'photo-profile-1'
+})
+let createUser = () => Promise.resolve({
+  firstName: 'Guillaume',
+  lastName: 'Salva'
+})
+
+export default function uploadPhoto(filename) {
+  return Promise.reject(new Error(`${filename} cannot be processed`))
 }

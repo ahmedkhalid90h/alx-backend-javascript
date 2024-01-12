@@ -1,0 +1,4 @@
+/node_modules
+# Ignore specific files
+0-main.js
+*.env
